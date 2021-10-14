@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">GAME-INADOR</a>
+    </nav>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-7">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Franquicia</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(data){ %>
+                            <% for(var i=0; i< data.length;i++){%>
+                               <tr>
+                                   <td><%= (i+1)%></td>
+                                   <td><%= data[i].nom_f%></td>
+                                   <td><%= data[i].tipo_f%></td>
+                                   <td><%= data[i].franquicia_f%></td>
+                                   <td><%= data[i].precio_f%></td>
+                                    <td>
+                                       
+                                    </td>
+                                </tr> 
+                            <%}%>
+                         <%} %>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="post">
+                            <div class="form-group mb-4">
+                                <input type="text" name="nom_f" placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" name="tipo_f" placeholder="Tipo" class="form-control">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="int" name="franquicia_f" placeholder="Franquicia" class="form-control">
+                            </div> 
+                            <div class="form-group mb-4">
+                                <input type="int" name="precio_f" placeholder="Precio" class="form-control">
+                            </div>   
+                            <button type="submit" class="btn btn-secondary mt-1">
+                            Guardar Funko
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-7">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Franquicia</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(data){ %>
+                            <% for(var i=0; i< data.length;i++){%>
+                               <tr>
+                                   <td><%= (i+1)%></td>
+                                   <td><%= data[i].nom_j%></td>
+                                   <td><%= data[i].clasificacion_j%></td>
+                                   <td><%= data[i].empresa_j%></td>
+                                   <td><%= data[i].precio_j%></td>
+                                    <td>
+                                       
+                                    </td>
+                                </tr> 
+                            <%}%>
+                         <%} %>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="post">
+                            <div class="form-group mb-4">
+                                <input type="text" name="nom_j" placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" name="clasificacion_j" placeholder="Clasificacion" class="form-control">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="int" name="empresa_j" placeholder="Empresa" class="form-control">
+                            </div> 
+                            <div class="form-group mb-4">
+                                <input type="int" name="precio_j" placeholder="Precio" class="form-control">
+                            </div>   
+                            <button type="submit" class="btn btn-secondary mt-1">
+                            Guardar Juego
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
